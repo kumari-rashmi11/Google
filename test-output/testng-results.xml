@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-13T12:28:12 IST" name="Suite" finished-at="2025-02-13T12:28:23 IST" duration-ms="10261">
+  <suite started-at="2025-02-20T14:02:58 IST" name="Default suite" finished-at="2025-02-20T14:03:14 IST" duration-ms="16344">
     <groups>
     </groups>
-    <test started-at="2025-02-13T12:28:12 IST" name="Test" finished-at="2025-02-13T12:28:23 IST" duration-ms="10261">
+    <test started-at="2025-02-20T14:02:58 IST" name="Default test" finished-at="2025-02-20T14:03:14 IST" duration-ms="16344">
       <class name="Test.test">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Test.test@73eb439a]" started-at="2025-02-13T12:28:12 IST" name="setup" finished-at="2025-02-13T12:28:17 IST" duration-ms="4224" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Test.test@21be3395]" started-at="2025-02-20T14:02:58 IST" name="setup" finished-at="2025-02-20T14:03:00 IST" duration-ms="1832" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="openGooglePage()[pri:1, instance:Test.test@73eb439a]" started-at="2025-02-13T12:28:17 IST" name="openGooglePage" finished-at="2025-02-13T12:28:19 IST" duration-ms="1829" status="PASS">
+        <test-method signature="Validate_second_JOIN_US_button_click_TC_003()[pri:3, instance:Test.test@21be3395]" started-at="2025-02-20T14:03:00 IST" name="Validate_second_JOIN_US_button_click_TC_003" finished-at="2025-02-20T14:03:10 IST" duration-ms="10353" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openGooglePage -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Test.test@73eb439a]" started-at="2025-02-13T12:28:19 IST" name="afterMethod" finished-at="2025-02-13T12:28:23 IST" duration-ms="4155" status="PASS">
+        </test-method> <!-- Validate_second_JOIN_US_button_click_TC_003 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Test.test@21be3395]" started-at="2025-02-20T14:03:10 IST" name="afterMethod" finished-at="2025-02-20T14:03:14 IST" duration-ms="4121" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- Test.test -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

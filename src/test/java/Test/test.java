@@ -8,26 +8,33 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class test {
+import Helper.BaseTest;
+import testprojectt.testprojectt.App;
+
+public class test extends BaseTest {
     
-    protected WebDriver driver;
-    protected WebDriverWait wait;
-
-    @BeforeMethod
-    public void setup() {
-//        System.setProperty("webdriver.edge.driver", "C:\\WebDrivers\\msedgedriver.exe"); // Set the correct path
-        driver = new EdgeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-    }
-
+   
     @Test(priority = 1)
     public void openGooglePage() {
         driver.get("https://www.google.com/");
         System.out.println("Page title is: " + driver.getTitle());
     }
+    
+    @Test(priority = 2, retryAnalyzer = Helper.RetryAnalyzer.class)
+	public void Search_feature() {
+    	openGooglePage();	
+    	App aut = new App(driver);
+		Helper.Interactions interact = new Helper.Interactions(driver);
+		interact.executeWithDelay(() -> aut.searchValidation());
+	}
 
+    @Test(priority = 3, retryAnalyzer = Helper.RetryAnalyzer.class)
+	public void Validate_second_JOIN_US_button_click_TC_003() {
+    	openGooglePage();	
+    	App aut = new App(driver);
+		Helper.Interactions interact = new Helper.Interactions(driver);
+		interact.executeWithDelay(() -> aut.clickFeelingluckyBtn());
+	}
 	 @AfterMethod
 		public void afterMethod() throws InterruptedException {
 			Thread.sleep(2000);
