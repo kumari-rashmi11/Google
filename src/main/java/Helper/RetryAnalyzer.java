@@ -2,6 +2,8 @@ package Helper;
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
+import org.testng.annotations.BeforeMethod;
+
 
 public class RetryAnalyzer implements IRetryAnalyzer {
 

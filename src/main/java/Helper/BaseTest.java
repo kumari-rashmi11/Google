@@ -12,6 +12,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 
+
 public class BaseTest {
 	protected WebDriver driver;
 	protected WebDriverWait wait;

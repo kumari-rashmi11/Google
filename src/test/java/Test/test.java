@@ -1,14 +1,10 @@
 package Test;
 
-import java.time.Duration;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import Helper.BaseTest;
+import Helper.Interactions;
 import testprojectt.testprojectt.App;
 
 public class test extends BaseTest {
@@ -24,7 +20,7 @@ public class test extends BaseTest {
 	public void Search_feature() {
     	openGooglePage();	
     	App aut = new App(driver);
-		Helper.Interactions interact = new Helper.Interactions(driver);
+		Interactions interact = new Interactions(driver);
 		interact.executeWithDelay(() -> aut.searchValidation());
 	}
 
@@ -32,7 +28,7 @@ public class test extends BaseTest {
 	public void Validate_second_JOIN_US_button_click_TC_003() {
     	openGooglePage();	
     	App aut = new App(driver);
-		Helper.Interactions interact = new Helper.Interactions(driver);
+		Interactions interact = new Interactions(driver);
 		interact.executeWithDelay(() -> aut.clickFeelingluckyBtn());
 	}
 	 @AfterMethod
