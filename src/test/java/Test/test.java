@@ -1,5 +1,6 @@
 package Test;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
@@ -22,14 +23,26 @@ public class test extends BaseTest {
 		Helper.Interactions interact = new Helper.Interactions(driver);
 		interact.executeWithDelay(() -> aut.searchValidation());
 	}
-
+    
     @Test(priority = 3, retryAnalyzer = Helper.RetryAnalyzer.class)
+   	public void Validate_About_Us_Button_Click_TC_001() {
+   		App aut = new App (driver);
+        driver.get("https://www.pursuitsoftware.com/");
+   		Helper.Interactions interact = new Helper.Interactions(driver);
+   		interact.executeWithDelay(() -> aut.clickAboutUsTabBtn());
+   		Assert.assertEquals(driver.getTitle(), "About Us - Pursuit Software");
+   	}
+
+    @Test(priority = 4, retryAnalyzer = Helper.RetryAnalyzer.class)
 	public void Validate_second_JOIN_US_button_click_TC_003() {
     	openGooglePage();	
     	App aut = new App(driver);
 		Helper.Interactions interact = new Helper.Interactions(driver);
 		interact.executeWithDelay(() -> aut.clickFeelingluckyBtn());
 	}
+    
+   
+    
 	 @AfterMethod
 		public void afterMethod() throws InterruptedException {
 			Thread.sleep(2000);
