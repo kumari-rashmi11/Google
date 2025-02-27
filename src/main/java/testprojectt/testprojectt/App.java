@@ -40,4 +40,8 @@ public class App {
     public void clickFeelingluckyBtn() {
 		interact.clickElement(locator.feelingluckybtn);
 	}
+    
+    public void clickAboutUsTabBtn() {
+		interact.clickElement(locator.AboutUsBtn);
+	}
 }
